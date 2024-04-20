@@ -9,7 +9,7 @@ data = json.load(open("data.json"))
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('/static/templates/index.html')
 
 @app.route('/search', methods=['POST'])
 def search():
