@@ -30,13 +30,14 @@ def translate(word):
     elif word.upper() in data:
         return data[word.upper()]
     elif len(get_close_matches(word, data.keys())) > 0:
-        yn = input("Oops did you mean %s?\nEnter Y if yes , or N if no" % get_close_matches(word, data.keys())[0])
-        if yn == "Y".lower():
-            return data[get_close_matches(word, data.keys())[0]]
-        elif yn == "N".lower():
-            return "The word doesn't exist"
-        else:
-            return "I don't understand your word"
+        return {"suggestions": get_close_matches(word, data.keys())}
+        # yn = input("Oops did you mean %s?\nEnter Y if yes , or N if no" % get_close_matches(word, data.keys())[0])
+        # if yn == "Y".lower():
+        #     return data[get_close_matches(word, data.keys())[0]]
+        # elif yn == "N".lower():
+        #     return "The word doesn't exist"
+        # else:
+        #     return "I don't understand your word"
     else:
         return "The word doesn't exist, Please check it"
 
