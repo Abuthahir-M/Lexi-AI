@@ -1,21 +1,22 @@
 function searchWord() {
     var word = document.getElementById('word').value;
     var capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1);
-    fetch('/search', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ word: word })
-    })
-    .then(response => response.json())
-    .then(data => {
-        let result = data.result;
-        let output = capitalizedWord + ': ' + result;
-        document.getElementById('definition').innerText = output;
-        document.getElementById('word').value = '';
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/search', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+                var result = response.result;
+                var output = capitalizedWord + ': ' + result;
+                document.getElementById('definition').innerText = output;
+                document.getElementById('word').value = '';
+            } else {
+                console.error('Request failed with status:', xhr.status);
+            }
+        }
+    };
+    xhr.send(JSON.stringify({word: word}));
 }
