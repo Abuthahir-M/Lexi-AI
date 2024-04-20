@@ -11,7 +11,7 @@ data = json.load(open("static/data.json"))
 def index():
     return render_template('index.html')
 
-@app.route('/search', methods=['POST'])
+@app.route('/search/', methods=['POST'])
 def search():
     # Retrieve the word from the request
     word = request.form['word'].lower()
