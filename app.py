@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request, jsonify
 from difflib import get_close_matches
 import json
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Load the JSON data
 data = json.load(open("static/data.json"))
