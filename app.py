@@ -5,7 +5,7 @@ import json
 app = Flask(__name__)
 
 # Load the JSON data
-data = json.load(open("data.json"))
+data = json.load(open("static/data.json"))
 
 @app.route('/')
 def index():
