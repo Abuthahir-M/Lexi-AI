@@ -1,11 +1,15 @@
 from flask import Flask, render_template, request, jsonify
 from difflib import get_close_matches
 import json
+import os
 
 app = Flask(__name__)
 
-# Load the JSON data
-data = json.load(open("data.json"))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+json_path = os.path.join(BASE_DIR, 'static', 'data.json')
+
+with open(json_path) as f:
+    data = json.load(f)
 
 @app.route('/')
 def index():
