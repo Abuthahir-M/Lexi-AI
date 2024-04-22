@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, jsonify
 from difflib import get_close_matches
 import json
 import os
+# extra modules
+from collections.abc import Container
 
 app = Flask(__name__)
 
