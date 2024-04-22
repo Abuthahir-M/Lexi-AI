@@ -47,5 +47,5 @@ def translate(word):
     else:
         return "The word doesn't exist, Please check it"
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5002)
+# if __name__ == '__main__':
+#     app.run(debug=True, port=5002)
