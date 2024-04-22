@@ -48,4 +48,4 @@ def translate(word):
         return "The word doesn't exist, Please check it"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
