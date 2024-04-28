@@ -1,0 +1,136 @@
+body{
+    padding: 0;
+    margin: 10% 0 0 0 ;
+    background: rgba(196, 227, 255, 0.5);
+}
+.header,
+.output,
+.search-field{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header img{
+    width: 180px;
+    border-radius: 100px;
+    border: 1px solid black;
+    margin-right: 30px;
+}
+.title-header h1{
+    font-size: 30px;
+    font-family: Righteous;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.title-header h2{
+    font-size: 25px;
+    font-family: Calibri;
+    font-weight: 200;
+    margin-top: 10px;
+}
+.search-field{
+    margin-top: 20px;
+}
+.search-field input{
+    font-size: 18px;
+    width: 40%;
+    padding: 12px;
+    border: 2px solid rgb(115, 115, 115);
+    border-radius: 50px;
+    font-family: Trebuchet MS;
+}
+.search-field .search{
+    margin-left: 10px;
+    font-size: 18px;
+    font-family: Trebuchet MS;
+    padding: 12px;
+    border: 2px solid rgb(115, 115, 115);
+    border-radius: 50px;
+}
+.output i{
+    font-size: 30px;
+}
+.output-result{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.output-result p{
+    font-size: 18px;
+    font-family: Trebuchet MS;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:470px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .header img{
+        width: 100px;
+        margin: 0;
+    }
+    .title-header {
+        text-align: center;
+    }
+    .title-header h1{
+        font-size: 30px;
+        font-family: Righteous;
+    }
+    .title-header h2{
+        font-size: 24px;
+        font-family: Calibri;
+        font-weight: 100;
+    }
+    .search-field{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+    }
+    .search-field input{
+        width: 90%;
+        font-size: 18px;
+        padding: 12px;
+        border: 2px solid rgb(115, 115, 115);
+        border-radius: 50px;
+        font-family: Trebuchet MS;
+        margin-bottom: 10px;
+    }
+    .search-field .search{
+        width: 25%;
+        font-size: 18px;
+        font-family: Trebuchet MS;
+        padding: 10px;
+        border: 2px solid rgb(115, 115, 115);
+        border-radius: 50px;
+    }
+    .output-result i{
+        font-size: 18px;
+    }
+    .output-result{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .output-result p{
+        font-size: 18px;
+        font-family: Trebuchet MS;
+        font-weight: normal;
+        text-align: center;
+    }
+
+
+}
